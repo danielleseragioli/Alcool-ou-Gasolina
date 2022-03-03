@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alcool_ou_Gasolina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-RD-6WW">
+                                <rect key="frame" x="20" y="88" width="374" height="106"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço do Alcool" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGF-13-5Rd">
+                                <rect key="frame" x="20" y="256" width="137.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preço da Gasolina" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeR-5e-8dJ">
+                                <rect key="frame" x="236" y="256" width="158" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: 2.99" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="46c-BQ-bDw">
+                                <rect key="frame" x="236" y="288" width="158" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="3fG-87-GjH"/>
+                                    <constraint firstAttribute="width" constant="158" id="ZML-TC-4oD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex: 1.99" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1c3-6I-Pb1">
+                                <rect key="frame" x="20" y="288" width="158" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="4Zl-6a-Gsw"/>
+                                    <constraint firstAttribute="width" constant="158" id="XCK-tO-tzu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="precoAlcoolCampo:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="VsH-Ef-Tk4"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOC-xs-yPE">
+                                <rect key="frame" x="20" y="348" width="374" height="38"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="calcular">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="calcularCombustivel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cuP-UF-p76"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Digite os preços primeiro!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WYg-WS-STn">
+                                <rect key="frame" x="20" y="432" width="374" height="83"/>
+                                <color key="backgroundColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="0.22448979591836735" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="6Z2-YX-L5S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.82749163309999996" green="0.70401547740000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.82749163309999996" green="0.70401547740000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KGF-13-5Rd" firstAttribute="top" secondItem="2Xf-RD-6WW" secondAttribute="bottom" constant="62" id="1bt-yo-yWJ"/>
+                            <constraint firstItem="1c3-6I-Pb1" firstAttribute="top" secondItem="KGF-13-5Rd" secondAttribute="bottom" constant="8" id="6J6-Kh-BEN"/>
+                            <constraint firstItem="WYg-WS-STn" firstAttribute="leading" secondItem="2Xf-RD-6WW" secondAttribute="leading" id="9gA-H7-pj9"/>
+                            <constraint firstItem="WeR-5e-8dJ" firstAttribute="trailing" secondItem="2Xf-RD-6WW" secondAttribute="trailing" id="F2l-TL-WJh"/>
+                            <constraint firstItem="ZOC-xs-yPE" firstAttribute="trailing" secondItem="2Xf-RD-6WW" secondAttribute="trailing" id="GvL-ne-TEu"/>
+                            <constraint firstItem="2Xf-RD-6WW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MNt-a5-Bxw"/>
+                            <constraint firstItem="WeR-5e-8dJ" firstAttribute="top" secondItem="2Xf-RD-6WW" secondAttribute="bottom" constant="62" id="W74-aC-r6i"/>
+                            <constraint firstItem="46c-BQ-bDw" firstAttribute="trailing" secondItem="2Xf-RD-6WW" secondAttribute="trailing" id="aQI-Pu-bzC"/>
+                            <constraint firstItem="KGF-13-5Rd" firstAttribute="leading" secondItem="2Xf-RD-6WW" secondAttribute="leading" id="bIY-j4-EwV"/>
+                            <constraint firstItem="46c-BQ-bDw" firstAttribute="top" secondItem="WeR-5e-8dJ" secondAttribute="bottom" constant="8" id="dGi-b7-2td"/>
+                            <constraint firstItem="WYg-WS-STn" firstAttribute="top" secondItem="ZOC-xs-yPE" secondAttribute="bottom" constant="46" id="gqi-Kp-q4T"/>
+                            <constraint firstItem="WYg-WS-STn" firstAttribute="trailing" secondItem="2Xf-RD-6WW" secondAttribute="trailing" id="mPr-5R-FF4"/>
+                            <constraint firstItem="2Xf-RD-6WW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="44" id="n34-Hf-dca"/>
+                            <constraint firstItem="ZOC-xs-yPE" firstAttribute="leading" secondItem="2Xf-RD-6WW" secondAttribute="leading" id="qVv-3O-LLQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Xf-RD-6WW" secondAttribute="trailing" constant="20" id="ut7-Dk-eAm"/>
+                            <constraint firstItem="1c3-6I-Pb1" firstAttribute="leading" secondItem="2Xf-RD-6WW" secondAttribute="leading" id="w2r-3t-8dy"/>
+                            <constraint firstItem="ZOC-xs-yPE" firstAttribute="top" secondItem="46c-BQ-bDw" secondAttribute="bottom" constant="26" id="yCi-G8-yUi"/>
+                            <constraint firstItem="WYg-WS-STn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zBJ-6V-Jcs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="precoAlcoolCampo" destination="1c3-6I-Pb1" id="71i-ni-bYg"/>
+                        <outlet property="precoGasolinaCampo" destination="46c-BQ-bDw" id="ON8-uJ-ce2"/>
+                        <outlet property="resultadoLegenda" destination="WYg-WS-STn" id="pdd-gA-4c9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="407" height="106"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
